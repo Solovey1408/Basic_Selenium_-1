@@ -32,7 +32,7 @@ print('Click login button')
 # print(driver.current_url)
 # get_url = driver.current_url
 # url = 'https://www.saucedemo.com/inventory.html'
-# assert url == get_url
+# assert url == get_url, 'Ошибка: URL должен быть корректным'
 # print('URL корректен')
 
 warning_text = driver.find_element(By.XPATH, "//h3[@data-test='error']")
@@ -46,5 +46,5 @@ print('Click Error Button')
 
 # text_products = driver.find_element(By.XPATH, "//span[@class='title']")
 # value_text_products = text_products.text
-# assert value_text_products == "Products"
+# assert value_text_products == "Products", 'Ошибка: Страница должна быть корректная'
 # print('Заголовок корректен')
