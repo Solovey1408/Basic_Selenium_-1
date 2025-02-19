@@ -37,7 +37,8 @@ print('Click login button')
 
 warning_text = driver.find_element(By.XPATH, "//h3[@data-test='error']")
 value_warning_text = warning_text.text
-assert value_warning_text == 'Epic sadface: Username and password do not match any user in this service'
+string_warning_text = 'Epic sadface: Username and password do not match any user in this service'
+assert value_warning_text ==  string_warning_text, 'Ошибка: Текст с ошибкой должен быть корректным'
 print('Сообщение корректно')
 
 error_button = driver.find_element(By.XPATH, "//button[@class='error-button']")
