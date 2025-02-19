@@ -1,5 +1,6 @@
 import time
 import datetime
+import os #Импорт модуля os для работы с файлами в системе
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -35,6 +36,11 @@ print('Click login button')
 time.sleep(2)
 
 now_date = datetime.datetime.now().strftime("%Y.%m.%d-%H.%M.%S")
-name_screenshot = 'screenshot' + now_date + '.png'
+name_screenshot = 'screenshot' + now_date + '.png' #Создание структуры имени файла скриншота
+
 path_screenshots = 'C:\\Users\\songf\\Desktop\\EduIT\\BasicPython\\1\\Basic_Selenium_-1\\screenshots'
-driver.save_screenshot(path_screenshots + name_screenshot)
+
+if not os.path.exists(path_screenshots): #Условие если папки со скриншотами нету
+    os.makedirs(path_screenshots) # Создание папки screenshots
+
+driver.save_screenshot(name_screenshot)
