@@ -30,13 +30,13 @@ button_login.click()
 print('Click login button')
 
 #Добавляем товары в корзину
-button_add_sauce_labs_backpack = driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-backpack']").click()
-button_add_sauce_labs_bike_light = driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-bike-light']").click()
-button_add_sauce_labs_bolt_t_shirt = driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-bolt-t-shirt']").click()
-button_add_sauce_labs_fleece_jacket = driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-fleece-jacket']").click()
-button_add_sauce_labs_onesie = driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-onesie']").click()
-button_add_test_all_the_things_t_shirt_red = driver.find_element(By.XPATH, "//button[@id='add-to-cart-test.allthethings()-t-shirt-(red)']").click()
-button_shopping_cart_link = driver.find_element(By.XPATH, "//a[@data-test='shopping-cart-link']").click()
+driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-backpack']").click()
+driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-bike-light']").click()
+driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-bolt-t-shirt']").click()
+driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-fleece-jacket']").click()
+driver.find_element(By.XPATH, "//button[@id='add-to-cart-sauce-labs-onesie']").click()
+driver.find_element(By.XPATH, "//button[@id='add-to-cart-test.allthethings()-t-shirt-(red)']").click()
+driver.find_element(By.XPATH, "//a[@data-test='shopping-cart-link']").click()
 
 
 actions = ActionChains(driver)
